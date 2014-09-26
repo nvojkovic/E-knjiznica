@@ -46,31 +46,39 @@
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="glyphicon glyphicon-book"></i> Knjige <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
-                            <li><a href="/book/add">Dodaj knjigu</a></li>
-                            <li><a href="#">Uredi podatke o knjizi</a></li>
-                            <li><a href="#">Otpiši knjigu</a></li>
-                            <li><a href="#">Posudi knjigu</a></li>
-                            <li><a href="#">Vrati knjigu</a></li>
+                            <li><a href="/knjiga/dodaj">Dodaj knjigu</a></li>
+                            <li><a href="/knjiga/uredi">Uredi podatke o knjizi</a></li>
+                            <li><a href="/knjiga/otpisi">Otpiši knjigu</a></li>
+                            <li><a href="/knjiga/posudi">Posudi knjigu</a></li>
+                            <li><a href="/knjiga/vrati">Vrati knjigu</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo2"><i class="glyphicon glyphicon-user"></i> Učenici <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo2" class="collapse">
-							<li><a href="#">Dodaj učenika</a></li>
-							<li><a href="#">Izbriši učenika</a></li>
-							<li><a href="#">Povećaj razrede</a></li>
+							<li><a href="/ucenik/dodaj">Dodaj učenika</a></li>
+                            <li><a href="/ucenik/uredi">Uredi učenika</a></li>
+							<li><a href="/ucenik/izbrisi">Izbriši učenika</a></li>
+							<li><a href="/ucenik/povecajrazrede">Povećaj razrede</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo3"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo3"><i class="glyphicon glyphicon-credit-card"></i> Naljepnice & iskaznice <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo3" class="collapse">
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
+                            <li><a href="/naljepnice">Ispiši naljepnice</a></li>
+                            <li><a href="/iskaznice">Ispiši iskaznice</a></li>
                         </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo4"><i class="glyphicon glyphicon-film"></i> AV građa <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo4" class="collapse">
+                            <li><a href="/av/dodaj">Dodaj AV građu</a></li>
+                            <li><a href="/av/posudi">Posudi AV građu</a></li>
+                            <li><a href="/av/ispisi">Ispiši naljepnice za AV građu</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/kontakt"><i class="glyphicon glyphicon-envelope"></i> Kontakt autora</a>
                     </li>
                 </ul>
             </div>
