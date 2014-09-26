@@ -58,6 +58,12 @@
       <input type="text" class="form-control" name = "Naklada">
     </div>
   </div>
+    <div class="form-group">
+    <label class="col-sm-2 control-label">Sadržaj</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name = "Sadrzaj">
+    </div>
+  </div>
   <div class="form-group">
     <label class="col-sm-2 control-label">ISBN</label>
     <div class="col-sm-10">
