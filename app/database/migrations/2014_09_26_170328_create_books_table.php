@@ -30,8 +30,7 @@ class CreateBooksTable extends Migration {
 			$table->string('Tip');
 			$table->string('Nabava');
 			$table->string('Kupljeno');
-			$table->increments('id');
-			$table->timestamps();
+			$table->increments('ID');
 		});
 	}
 

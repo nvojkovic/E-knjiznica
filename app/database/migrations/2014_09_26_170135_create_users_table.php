@@ -18,8 +18,7 @@ class CreateUsersTable extends Migration {
 			$table->string('Prezime');
 			$table->string('Tip');
 			$table->integer('Razred');
-			$table->increments('id');
-			$table->timestamps();
+			$table->increments('ID');
 		});
 	}
 
