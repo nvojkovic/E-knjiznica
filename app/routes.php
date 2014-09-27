@@ -28,3 +28,7 @@ Route::post('/knjiga/vrati', 'BookController@ReturningPost');
 //User routes
 Route::get('/ucenik/dodaj', 'UserController@Add');
 Route::post('/ucenik/dodaj', 'UserController@AddPost');
+
+//AV routes
+Route::get('/av/dodaj', 'AVController@Add');
+Route::post('/av/dodaj', 'AVController@AddPost');
