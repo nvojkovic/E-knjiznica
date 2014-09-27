@@ -3,7 +3,7 @@
 @section('content')
 @if(isset($user) && isset($book))
 <div class="alert alert-success">
-    <h4>Knjiga <strong>{{$book}}</strong> je posuđena <strong>{{$user}}</strong></h4>
+    <h4>Korisnik <strong>{{$user}}</strong> je posudio/la <strong>{{$book}}</strong></h4>
     </div>
 @endif
     <div class="row">
