@@ -16,8 +16,8 @@ class CreateBorrowTable extends Migration {
 		{
 			$table->integer('Korisnik');
 			$table->integer('Knjiga');
-			$table->integer('DatumPosudbe');
-			$table->integer('DatumVracanja');
+			$table->dateTime('DatumPosudbe');
+			$table->dateTime('DatumVracanja');
 			$table->increments('ID');
 		});
 	}
