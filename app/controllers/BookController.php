@@ -35,5 +35,15 @@ class BookController extends BaseController {
 		return View::Make('borrow', array('user' => $user->Ime." ".$user->Prezime, 'book' => $book->Naslov));
 	}
 
+	public function Returning()
+	{
+		return View::Make('returning');
+	}
 
+	public function ReturningPost()
+	{
+		$book = Input::get('book');
+		echo $book;
+		return View::Make('returning',array('book' => $book, 'user' => 2));
+	}
 }
