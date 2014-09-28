@@ -3,7 +3,7 @@
 class Grade extends Eloquent{
 	
 	public $timestamps = false;
-	protected $table = 'razred';
+	protected $table = 'razredi';
 	protected $fillable = array('*');
 
 	public function users()
