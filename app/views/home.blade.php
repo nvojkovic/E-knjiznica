@@ -92,8 +92,8 @@
                     <i class="fa fa-support fa-5x"></i>
                 </div>
                 <div class="col-xs-9 text-right">
-                    <div class="huge">13</div>
-                    <div>Još nešto triba dodat!<br><br></div>
+                    <div class="huge">{{$AVCount}}</div>
+                    <div>primjeraka AV građe<br><br></div>
                 </div>
             </div>
         </div>
@@ -120,7 +120,7 @@
     Morris.Area({
         element: 'morris-area-chart',
         data: {{$data}},
-        xkey: 'month',
+        xkey: 'day',
         ykeys: ['count'],
         labels: ['Broj posudbi'],
         pointSize: 2,
