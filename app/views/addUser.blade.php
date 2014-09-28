@@ -29,6 +29,16 @@
     </div>
   </div>
   <div class="form-group">
+    <label class="col-sm-2 control-label">Razred</label>
+    <div class="col-sm-10">
+      <select class="form-control" name = "Razred">
+        @foreach ($grades as $grade)
+            <option value = "{{$grade->ID}}">{{$grade->Broj}}. {{$grade->Slovo}}</option>
+        @endforeach
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
       <button type="submit" class="btn btn-success">Dodaj</button>
       <button type="submit" class="btn btn-danger">Odustani</button>
