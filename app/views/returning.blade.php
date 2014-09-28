@@ -26,6 +26,8 @@
                 </div>
               </div>
             </div>
+            <br>
+            <div style="text-align:center;"><button type="button" class="btn btn-info btn-lg" id = "rucno">Ručni unos</button></div>
         </div>
         
     </div>
@@ -60,6 +62,16 @@
 
         $("#unos").blur(function() {
           setTimeout(function() { $("#unos").focus(); }, 0);
+        });
+
+        $("#rucno").click(function() {
+          //show prompt
+          $("#unos").val(prompt("Unesite barkod:"));
+
+          //trigger api events
+          var e = jQuery.Event("keydown");
+          e.which = 13; // # Some key code value
+          $("#unos").trigger(e);
         });
     });
 </script>
