@@ -51,7 +51,7 @@
     <br>
     <br>
 <div style="text-align:center;"><button type="button" class="btn btn-success btn-lg" id="submit">Posudi</button>
-<button type="button" class="btn btn-danger btn-lg" >Odustani</button></div>
+<button type="button" class="btn btn-info btn-lg" id = "rucno">Ručni unos</button></div>
  
 
 <script>
@@ -91,6 +91,16 @@
 
         $("#unos").blur(function() {
           setTimeout(function() { $("#unos").focus(); }, 0);
+        });
+
+        $("#rucno").click(function() {
+          //show prompt
+          $("#unos").val(prompt("Unesite barkod:"));
+
+          //trigger api events
+          var e = jQuery.Event("keydown");
+          e.which = 13; // # Some key code value
+          $("#unos").trigger(e);
         });
     });
 </script>
