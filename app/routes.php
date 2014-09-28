@@ -39,3 +39,7 @@ Route::get('/iskaznice', 'CardController@Create');
 Route::post('/iskaznice', 'CardController@CreatePost');
 Route::get('/naljepnice', 'StickerController@Create');
 Route::post('/naljepnice', 'StickerController@CreatePost');
+
+//Contact routes
+Route::get('/kontakt', 'ContactController@Show');
+Route::post('/kontakt', 'ContactController@Send');
