@@ -33,3 +33,9 @@ Route::post('/ucenik/dodaj', 'UserController@AddPost');
 //AV routes
 Route::get('/av/dodaj', 'AVController@Add');
 Route::post('/av/dodaj', 'AVController@AddPost');
+
+//Card and sticker routes
+Route::get('/iskaznice', 'CardController@Create');
+Route::post('/iskaznice', 'CardController@CreatePost');
+Route::get('/naljepnice', 'StickerController@Create');
+Route::post('/naljepnice', 'StickerController@CreatePost');
