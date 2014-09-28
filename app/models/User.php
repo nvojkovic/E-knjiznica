@@ -8,6 +8,6 @@ class User extends Eloquent{
 
 	public function grade()
 	{
-		return $this->hasOne('Grade', 'Ucenik', 'Razred');
+		return $this->belongsTo('Grade', 'Ucenik', 'Razred');
 	}
 }
