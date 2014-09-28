@@ -16,6 +16,7 @@ Route::get('/', 'DashboardController@Home');
 //API routes
 Route::get('/api/korisnik/{id}', 'ApiController@User');
 Route::get('/api/knjiga/{id}', 'ApiController@Book');
+Route::get('/api/userlike/{partialName}', 'ApiController@UserLike');
 
 //Book routes
 Route::get('/knjiga/dodaj', 'BookController@Add');
