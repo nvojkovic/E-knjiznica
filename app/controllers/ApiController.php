@@ -13,8 +13,10 @@ class ApiController extends BaseController {
 		return $user;
 	}
 
-	public function Lend($userid, $bookid)
+	public function UserLike($partialName)
 	{
-		return "ŽIVOT";
+		$user = DB::select(DB::raw("SELECT Ime, Prezime FROM korisnici WHERE CONCAT_WS(' ', Ime, Prezime) LIKE '".$partialName."%'"));
+		return $user;
 	}
+
 }
