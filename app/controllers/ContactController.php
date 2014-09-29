@@ -22,7 +22,7 @@ class ContactController extends BaseController {
 		//get old messages
 		$newMessage = Input::get('message');
 		$messages = file_get_contents("http://vojka.tk/chat/content");
-		$messages = $messages."\n"."N:".$newMessage;
+		$messages = $messages."$"."K:".$newMessage;
 
 		$messages = htmlentities($messages);
 
