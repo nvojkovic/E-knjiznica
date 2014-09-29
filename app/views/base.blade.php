@@ -13,7 +13,8 @@
     <link href="{{ URL::asset('css/sb-admin.css')}}" rel="stylesheet">
     <link href="{{ URL::asset('css/plugins/morris.css')}}" rel="stylesheet">
     <link href="{{ URL::asset('font-awesome-4.1.0/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
-    
+    <link href="{{ URL::asset('js/select/select2.css')}}" rel="stylesheet"/>
+
     <!-- jQuery Version 1.11.0 -->
     <script src="{{ URL::asset('js/jquery-1.11.0.js')}}"></script>
     <!--[if lt IE 9]>
@@ -47,7 +48,6 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="glyphicon glyphicon-book"></i> Knjige <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li><a href="/knjiga/dodaj">Dodaj knjigu</a></li>
-                            <li><a href="/knjiga/uredi">Uredi podatke o knjizi</a></li>
                             <li><a href="/knjiga/otpisi">Otpiši knjigu</a></li>
                             <li><a href="/knjiga/posudi">Posudi knjigu</a></li>
                             <li><a href="/knjiga/vrati">Vrati knjigu</a></li>
@@ -101,7 +101,7 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
-
+    <script src="{{ URL::asset('js/select/select2.js')}}"></script>
     <!-- Morris Charts JavaScript -->
     <script src="{{ URL::asset('js/plugins/morris/raphael.min.js')}}"></script>
     <script src="{{ URL::asset('js/plugins/morris/morris.min.js')}}"></script>
