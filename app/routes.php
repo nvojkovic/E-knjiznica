@@ -25,6 +25,8 @@ Route::get('/knjiga/posudi', 'BookController@Borrow');
 Route::post('/knjiga/posudi', 'BookController@BorrowPost');
 Route::get('/knjiga/vrati', 'BookController@Returning');
 Route::post('/knjiga/vrati', 'BookController@ReturningPost');
+Route::get('/knjiga/otpisi', 'BookController@WriteOff');
+Route::post('/knjiga/otpisi', 'BookController@WriteOffPost');
 
 //User routes
 Route::get('/ucenik/dodaj', 'UserController@Add');
