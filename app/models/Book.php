@@ -10,6 +10,6 @@ class Book extends Eloquent{
 
 	public function borrow()
 	{
-		return $this->has('Borrow', 'Knjiga', 'BookID')->where('DatumVracanja', NULL);
+		return $this->hasOne('Borrow', 'Knjiga', 'BookID')->where('DatumVracanja', NULL);
 	}
 }
