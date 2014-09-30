@@ -23,7 +23,7 @@
       	 <div class="form-group">
           	<select id = "unos" multiple style="width:70%;text-align:center;" name = "unos[]">
             	@foreach($users as $user)
-            	<option value = {{$user->ID}}>{{$user->Ime}} {{$user->Prezime}} ({{$user->ID}})</option>
+            	<option value = {{$user->UserID}}>{{$user->Ime}} {{$user->Prezime}} ({{$user->UserID}})</option>
         		@endforeach
             </select>
          </div>
