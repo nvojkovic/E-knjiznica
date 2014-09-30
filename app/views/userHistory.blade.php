@@ -15,7 +15,7 @@
 
             @if(isset($history))
             <br>
-            <h4 class = "text-center"><strong>Naslov: </strong>{{$user->Ime}} {{$user->Prezime}}</h4>
+            <h4 class = "text-center"><strong>Ime i prezime: </strong>{{$user->Ime}} {{$user->Prezime}}</h4>
             @if(isset($grade->Broj))
             <h4 class = "text-center"><strong>Razred: </strong>{{$grade->Broj}}. {{$grade->Slovo}}</h4>
             @endif
