@@ -72,7 +72,6 @@ class BookController extends BaseController {
 	{
 		$book = Book::find(Input::get('book'));
 		$book->delete();
-		print_r(DB::getQueryLog());
-		//return View::Make('writeBookOff',array('book' => $book));
+		return View::Make('writeBookOff',array('book' => $book));
 	}
 }
