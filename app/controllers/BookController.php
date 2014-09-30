@@ -63,4 +63,16 @@ class BookController extends BaseController {
 		return View::Make('returning',array('book' => $book, 'user' => $user));
 	}
 
+	public function WriteOff()
+	{
+		return View::make('writeBookOff');
+	}
+
+	public function WriteOffPost()
+	{
+		$book = Book::find(Input::get('book'));
+		$book->delete();
+		print_r(DB::getQueryLog());
+		//return View::Make('writeBookOff',array('book' => $book));
+	}
 }
