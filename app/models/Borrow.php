@@ -11,4 +11,9 @@ class Borrow extends Eloquent{
 	{
 		return $this->belongsTo('Book', 'BookID', 'Knjiga');
 	}
+
+	public function user()
+	{
+		return $this->hasOne('User', 'UserID', 'Korisnik');
+	}
 }
