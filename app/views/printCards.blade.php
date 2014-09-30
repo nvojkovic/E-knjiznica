@@ -30,7 +30,7 @@
 		  <div class="form-group">
 		    <label class="col-sm-2 control-label">Početno mjesto na papiru</label>
 		    <div class="col-sm-10">
-		      <input type="text" class="form-control" name = "place">
+		      <input type="text" class="form-control" name = "place" value = "1">
 		    </div>
 		  </div>
             <br><br><br><br>
