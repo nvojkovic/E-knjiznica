@@ -18,7 +18,7 @@ class CreateAvTable extends Migration {
 			$table->string('Autor');
 			$table->string('Izdavac');
 			$table->string('Napomena');
-			$table->increments('ID');
+			$table->increments('AVID');
 		});
 	}
 

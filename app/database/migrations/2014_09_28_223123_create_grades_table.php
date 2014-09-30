@@ -16,7 +16,7 @@ class CreateGradesTable extends Migration {
 		{
 			$table->integer('Broj');
 			$table->text('Slovo');
-			$table->increments('ID');
+			$table->increments('GradeID');
 		});
 	}
 

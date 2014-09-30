@@ -18,7 +18,7 @@ class CreateBorrowTable extends Migration {
 			$table->integer('Knjiga');
 			$table->dateTime('DatumPosudbe');
 			$table->dateTime('DatumVracanja');
-			$table->increments('ID');
+			$table->increments('BorrowID');
 		});
 	}
 
