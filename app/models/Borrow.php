@@ -9,7 +9,7 @@ class Borrow extends Eloquent{
 
 	public function book()
 	{
-		return $this->belongsTo('Book', 'BookID', 'Knjiga');
+		return $this->belongsTo('Book', 'Knjiga', 'BookID');
 	}
 
 	public function user()
