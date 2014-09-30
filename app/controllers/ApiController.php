@@ -13,10 +13,4 @@ class ApiController extends BaseController {
 		return $user;
 	}
 
-	public function UserLike($partialName)
-	{
-		$user = DB::select(DB::raw("SELECT korisnici.Ime, korisnici.Prezime, razredi.Broj, razredi.Slovo FROM korisnici, razredi WHERE CONCAT_WS(' ', Ime, Prezime) LIKE '".$partialName."%'"));
-		return $user;
-	}
-
 }
