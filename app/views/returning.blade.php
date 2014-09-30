@@ -50,7 +50,7 @@
                         .done(function(data) {
                              $("#naslov").val(data.Naslov);
                              $("#autor").val(data.Autor);
-                             $("#book").val(data.ID);
+                             $("#book").val(data.BookID);
                              $("#form").submit();
                         });
                 }

@@ -68,7 +68,7 @@
                         .done(function(data) {
                              $("#ime").val(data.Ime);
                              $("#prezime").val(data.Prezime);
-                             $("#user").val(data.ID);
+                             $("#user").val(data.UserID);
                         });
 
                 }
@@ -78,7 +78,7 @@
                         .done(function(data) {
                              $("#naslov").val(data.Naslov);
                              $("#autor").val(data.Autor);
-                             $("#book").val(data.ID);
+                             $("#book").val(data.BookID);
                         });
                 }
                 $("#unos").val("");
