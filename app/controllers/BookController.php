@@ -98,6 +98,6 @@ class BookController extends BaseController {
 				$temp['DatumVracanja'] = date('d.m.Y', strtotime($item->DatumVracanja));
 			array_push($history, $temp);
 		}
-		return View::make('bookHistory', array('history' => $history));
+		return View::make('bookHistory', array('history' => $history, 'book' => $book));
 	}
 }

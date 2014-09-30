@@ -15,6 +15,8 @@
 
             @if(isset($history))
             <br>
+            <h4 class = "text-center"><strong>Naslov: </strong> {{$book->Naslov}}</h4>
+            <h4 class = "text-center"><strong>Autor: </strong> {{$book->Autor}}</h4>
             <br>
             <table class="table table-bordered table-hover">
                 <thead>
