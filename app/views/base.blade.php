@@ -57,8 +57,6 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo2"><i class="glyphicon glyphicon-user"></i> Učenici <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo2" class="collapse">
 							<li><a href="/ucenik/dodaj">Dodaj učenika</a></li>
-                            <li><a href="/ucenik/uredi">Uredi učenika</a></li>
-							<li><a href="/ucenik/izbrisi">Izbriši učenika</a></li>
 							<li><a href="/ucenik/povecajrazrede">Povećaj razrede</a></li>
                         </ul>
                     </li>
@@ -75,6 +73,14 @@
                             <li><a href="/av/dodaj">Dodaj AV građu</a></li>
                             <li><a href="/av/posudi">Posudi AV građu</a></li>
                             <li><a href="/av/ispisi">Ispiši naljepnice za AV građu</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo5"><i class="glyphicon glyphicon-stats"></i> Statistika <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo5" class="collapse">
+                            <li><a href="/knjiga/povijest">Povijest knjige</a></li>
+                            <li><a href="/ucenik/povijest">Povijest učenika</a></li>
+                            <li><a href="/knjiga/trazi">Traži knjige</a></li>
                         </ul>
                     </li>
                     <li>
