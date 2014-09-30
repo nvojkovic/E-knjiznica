@@ -9,6 +9,11 @@ class User extends Eloquent{
 
 	public function grade()
 	{
-		return $this->belongsTo('Grade', 'Razred', 'UserID');
+		return $this->belongsTo('Grade', 'Razred', 'GradeID');
+	}
+
+	public function borrow()
+	{
+		return $this->hasMany('Borrow', 'Korisnik', 'UserID');
 	}
 }
