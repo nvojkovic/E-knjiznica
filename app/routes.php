@@ -27,10 +27,14 @@ Route::get('/knjiga/vrati', 'BookController@Returning');
 Route::post('/knjiga/vrati', 'BookController@ReturningPost');
 Route::get('/knjiga/otpisi', 'BookController@WriteOff');
 Route::post('/knjiga/otpisi', 'BookController@WriteOffPost');
+Route::get('/knjiga/povijest', 'BookController@History');
+Route::post('/knjiga/povijest', 'BookController@HistoryPost');
 
 //User routes
 Route::get('/ucenik/dodaj', 'UserController@Add');
 Route::post('/ucenik/dodaj', 'UserController@AddPost');
+Route::get('/ucenik/povijest', 'UserController@History');
+Route::post('/ucenik/povijest', 'UserController@HistoryPost');
 
 //AV routes
 Route::get('/av/dodaj', 'AVController@Add');
