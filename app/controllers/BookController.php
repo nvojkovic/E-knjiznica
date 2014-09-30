@@ -30,6 +30,7 @@ class BookController extends BaseController {
 		$borrow->Korisnik = Input::get('user');
 		$borrow->Knjiga = Input::get('book');
 		$borrow->DatumPosudbe = date("Y-m-d h:i:s");
+		$borrow->DatumVracanja = NULL;
 		$borrow->save();
 
 		return View::Make('borrow', array('user' => $user->Ime." ".$user->Prezime, 'book' => $book->Naslov));
@@ -42,8 +43,24 @@ class BookController extends BaseController {
 
 	public function ReturningPost()
 	{
-		$book = Input::get('book');
-		echo $book;
-		return View::Make('returning',array('book' => $book, 'user' => 2));
+		$book = Book::find(Input::get('book'));
+
+		if(!count($book->borrow()))
+		{
+			return View::Make('returning');
+		}
+
+		//return the book
+		$borrow = $book->borrow;
+		$borrow->DatumVracanja = date("Y-m-d h:i:s");
+		$borrow->save();
+
+		//print the confirmation
+		$book = Book::find(Input::get('book'));
+		$user = User::find($borrow->Korisnik);
+		$book = $book->Naslov;
+		$user = $user->Ime." ".$user->Prezime;
+		return View::Make('returning',array('book' => $book, 'user' => $user));
 	}
+
 }
