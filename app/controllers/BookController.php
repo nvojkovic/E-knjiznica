@@ -100,4 +100,19 @@ class BookController extends BaseController {
 		}
 		return View::make('bookHistory', array('history' => $history, 'book' => $book));
 	}
+
+	public function Search()
+	{
+		return View::make('bookSearch');
+	}
+
+	public function SearchPost()
+	{
+		if(Input::get('Naslov') != "")
+			$books = Book::with('Borrow')->where('Naslov', 'LIKE', Input::get('Naslov').'%')->get();
+		else if (Input::get('Autor') != "")
+			$books = Book::with('Borrow')->where('Autor', 'LIKE', Input::get('Autor').'%')->get();
+		
+		return View::make('bookSearch', array('books' => $books));
+	}
 }
