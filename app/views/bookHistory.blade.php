@@ -90,8 +90,10 @@
 <br>
 <br>
 <br>
+@if(!isset($history))
 <form method="POST" action="/knjiga/povijest" id ="form">
 <input id ="unos" name = "unos" autofocus style = "position: absolute; left: -99em;">
 <input id ="book" name = "book" style = "visibility: hidden;">
 </form>
+@endif
 @stop

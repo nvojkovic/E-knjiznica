@@ -92,8 +92,10 @@
 <br>
 <br>
 <br>
+@if(!isset($history))
 <form method="POST" action="/ucenik/povijest" id ="form">
 <input id ="unos" name = "unos" autofocus style = "position: absolute; left: -99em;">
 <input id ="user" name = "user" style = "visibility: hidden;">
+@endif
 </form>
 @stop
