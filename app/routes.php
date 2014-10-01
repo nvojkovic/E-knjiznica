@@ -29,6 +29,8 @@ Route::get('/knjiga/otpisi', 'BookController@WriteOff');
 Route::post('/knjiga/otpisi', 'BookController@WriteOffPost');
 Route::get('/knjiga/povijest', 'BookController@History');
 Route::post('/knjiga/povijest', 'BookController@HistoryPost');
+Route::get('/knjiga/trazi', 'BookController@Search');
+Route::post('/knjiga/trazi', 'BookController@SearchPost');
 
 //User routes
 Route::get('/ucenik/dodaj', 'UserController@Add');
