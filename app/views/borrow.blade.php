@@ -50,7 +50,7 @@
     <br>
     <br>
     <br>
-<div style="text-align:center;"><button type="button" class="btn btn-success btn-lg" id="submit">Posudi</button>
+<div style="text-align:center;">
 <button type="button" class="btn btn-info btn-lg" id = "rucno">Ručni unos</button></div>
  
 
@@ -61,14 +61,18 @@
             if (e.keyCode == 13)
             {
                 var content = $("#unos").val();
-
                 if(content[0] == 'U')
                 {
                     $.ajax( "/api/korisnik/" + content.slice(1))
                         .done(function(data) {
-                             $("#ime").val(data.Ime);
-                             $("#prezime").val(data.Prezime);
-                             $("#user").val(data.UserID);
+                            $("#ime").val(data.Ime);
+                            $("#prezime").val(data.Prezime);
+                            $("#user").val(data.UserID);
+
+                            if($("#book").val() != "" && $("#user").val() != "")
+                            {
+                                $("#form").submit();
+                            }
                         });
 
                 }
@@ -76,9 +80,14 @@
                 {
                     $.ajax( "/api/knjiga/" + content.slice(1))
                         .done(function(data) {
-                             $("#naslov").val(data.Naslov);
-                             $("#autor").val(data.Autor);
-                             $("#book").val(data.BookID);
+                            $("#naslov").val(data.Naslov);
+                            $("#autor").val(data.Autor);
+                            $("#book").val(data.BookID);
+
+                            if($("#book").val() != "" && $("#user").val() != "")
+                            {
+                                $("#form").submit();
+                            }
                         });
                 }
                 $("#unos").val("");
@@ -98,7 +107,7 @@
           $("#unos").val(prompt("Unesite barkod:"));
 
           //trigger api events
-          var e = jQuery.Event("keydown");
+          var e = jQuery.Event("keyup");
           e.which = 13; // # Some key code value
           $("#unos").trigger(e);
         });
