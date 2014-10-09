@@ -1,5 +1,10 @@
 @extends('base')
 @section('content')
+<style type="text/css">
+    .huge{
+        font-size: 2em;
+    }
+</style>
 <div class="row">
     <div class="col-lg-12">
         <h1 class="page-header">
@@ -13,7 +18,7 @@
     <div class="panel-heading">
         <div class="row">
             <div class="col-xs-3">
-                <i class="glyphicon glyphicon-user" style="font-size:55px;"></i>
+                <i class="glyphicon glyphicon-user" style="font-size:40px;"></i>
             </div>
             <div class="col-xs-9 text-right">
                 <div class="huge">{{$userCount}}</div>
@@ -28,7 +33,7 @@
         <div class="panel-heading">
             <div class="row">
                 <div class="col-xs-3">
-                    <i class="glyphicon glyphicon-book" style="font-size:55px;"></i>
+                    <i class="glyphicon glyphicon-book" style="font-size:40px;"></i>
                 </div>
                 <div class="col-xs-9 text-right">
                     <div class="huge">{{$studentBookCount}}</div>
@@ -43,7 +48,7 @@
         <div class="panel-heading">
             <div class="row">
                 <div class="col-xs-3">
-                    <i class="glyphicon glyphicon-book" style="font-size:55px;"></i>
+                    <i class="glyphicon glyphicon-book" style="font-size:40px;"></i>
                 </div>
                 <div class="col-xs-9 text-right">
                     <div class="huge">{{$teacherBookCount}}</div>
@@ -58,11 +63,11 @@
         <div class="panel-heading">
             <div class="row">
                 <div class="col-xs-3">
-                    <i class="glyphicon glyphicon-film" style="font-size:55px;"></i>
+                    <i class="glyphicon glyphicon-film" style="font-size:40px;"></i>
                 </div>
                 <div class="col-xs-9 text-right">
                     <div class="huge">124</div>
-                    <div>primjeraka AV građe<br><br></div>
+                    <div>primjeraka časopisa<br><br></div>
                 </div>
             </div>
         </div>
@@ -73,7 +78,7 @@
         <div class="panel-heading">
             <div class="row">
                 <div class="col-xs-3">
-                    <i class="fa fa-support fa-5x"></i>
+                    <i class="fa fa-support fa-5x" style="font-size:40px;"></i>
                 </div>
                 <div class="col-xs-9 text-right">
                     <div class="huge">{{$activeBorrowCount}}</div>
@@ -89,7 +94,7 @@
         <div class="panel-heading">
             <div class="row">
                 <div class="col-xs-3">
-                    <i class="fa fa-support fa-5x"></i>
+                    <i class="glyphicon glyphicon-film" style="font-size:40px;"></i>
                 </div>
                 <div class="col-xs-9 text-right">
                     <div class="huge">{{$AVCount}}</div>
