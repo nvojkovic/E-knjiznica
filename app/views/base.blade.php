@@ -111,7 +111,21 @@
     <!-- Morris Charts JavaScript -->
     <script src="{{ URL::asset('js/plugins/morris/raphael.min.js')}}"></script>
     <script src="{{ URL::asset('js/plugins/morris/morris.min.js')}}"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $(document).keypress(function(e) {
+            //if 'p' is pressed
+            if(e.which == 112 && !$("input").is(':focus')) {
+                window.location.replace("/knjiga/posudi");
+            }
+            //if 'v' is pressed
+            else if(e.which == 118 && !$("input").is(':focus')) {
+                window.location.replace("/knjiga/vrati");
+            }
+        });
+    });
 
+    </script>
 </body>
 
 </html>
