@@ -41,6 +41,8 @@ Route::post('/ucenik/povijest', 'UserController@HistoryPost');
 //AV routes
 Route::get('/av/dodaj', 'AVController@Add');
 Route::post('/av/dodaj', 'AVController@AddPost');
+Route::get('/av/ispisi', 'AVPrintController@Create');
+Route::post('/av/ispisi', 'AVPrintController@CreatePost');
 
 //Card and sticker routes
 Route::get('/iskaznice', 'CardController@Create');
