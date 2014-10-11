@@ -95,6 +95,15 @@
     </div>
   </div>
   <div class="form-group">
+    <label class="col-sm-2 control-label">Tip</label>
+    <div class="col-sm-10">
+      <select class="form-control" name = "Tip">
+        <option value="U">Učenička literatura</option>
+        <option value="N">Nastavnička literatura</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
     <label class="col-sm-2 control-label">Broj primjeraka</label>
     <div class="col-sm-10">
       <input type="text" class="form-control" value = "1" name = "Primjerci">
