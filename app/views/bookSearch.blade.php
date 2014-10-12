@@ -46,10 +46,10 @@
                         <td>{{$book['Naslov']}}</td>
                         <td>{{$book['Autor']}}</td>
                         <td>
-                        @if(isset($book->borrow->DatumPosudbe))
-                            Da
+                        @if(isset($book->DatumPosudbe))
+                            {{$book['Ime']}} {{$book['Prezime']}}
                         @else
-                            Ne
+                            Nije posuđena
                         @endif
                         </td>
                         <td>{{$book['BookID']}}</td>
