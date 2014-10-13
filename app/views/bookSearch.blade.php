@@ -31,6 +31,8 @@
             @if(isset($books))
             <br>
             <br>
+            <center><h4><strong>Broj primjeraka: </strong> {{count($books)}}</h4></center>
+            <br>
             <table class="table table-bordered table-hover">
                 <thead>
                     <tr>
