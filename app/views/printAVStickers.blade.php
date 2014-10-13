@@ -4,14 +4,14 @@
 <div class="row">
     <div class="col-lg-12">
         <h1 class="page-header">
-            Ispiši iskaznice
+            Ispiši naljepnice
         </h1>
     </div>
 </div>
 
 <div class="row">
         <div class="col-md-6 col-md-offset-3">
-            <h1 class = "text-center">Odaberi učenike za ispis </h1>
+            <h1 class = "text-center">Odaberi AV građu za ispis </h1>
             <br>
             <br>
         </div>
