@@ -115,4 +115,10 @@ class BookController extends BaseController {
 		
 		return View::make('bookSearch', array('books' => $books));
 	}
+
+	public function Borrows()
+	{
+		$books = Book::join('posudbe', 'Knjiga' , '=', 'BookID')->where('DatumVracanja', '=', NULL)->leftJoin('korisnici', 'UserID' , '=', 'Korisnik')->get();
+		return View::make('bookBorrows', array('books' => $books));
+	}
 }
