@@ -81,6 +81,7 @@
                             <li><a href="/knjiga/povijest">Povijest knjige</a></li>
                             <li><a href="/ucenik/povijest">Povijest učenika</a></li>
                             <li><a href="/knjiga/trazi">Traži knjige</a></li>
+                            <li><a href="/knjiga/posudbe">Aktivne posudbe</a></li>
                         </ul>
                     </li>
                     <li>
