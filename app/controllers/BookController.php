@@ -109,9 +109,9 @@ class BookController extends BaseController {
 	public function SearchPost()
 	{
 		if(Input::get('Naslov') != "")
-			$books = Book::where('Naslov', 'LIKE', "%".Input::get('Naslov')."%")->leftJoin('posudbe', 'Knjiga' , '=', 'BookID')->leftJoin('korisnici', 'UserID' , '=', 'Korisnik')->get();
+			$books = Book::where('Naslov', 'LIKE', "%".Input::get('Naslov')."%")->leftJoin('posudbe', 'Knjiga' , '=', 'BookID')->leftJoin('korisnici', 'UserID' , '=', 'Korisnik')->groupBy('knjige.BookID')->get();
 		else if (Input::get('Autor') != "")
-			$books = Book::where('Autor', 'LIKE', "%".Input::get('Autor')."%")->leftJoin('posudbe', 'Knjiga' , '=', 'BookID')->leftJoin('korisnici', 'UserID' , '=', 'Korisnik')->get();
+			$books = Book::where('Autor', 'LIKE', "%".Input::get('Autor')."%")->leftJoin('posudbe', 'Knjiga' , '=', 'BookID')->leftJoin('korisnici', 'UserID' , '=', 'Korisnik')->groupBy('knjige.BookID')->get();
 		
 		return View::make('bookSearch', array('books' => $books));
 	}
