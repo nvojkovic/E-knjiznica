@@ -37,7 +37,6 @@
                 <thead>
                     <tr>
                         <th>Naslov</th>
-                        <th>Autor</th>
                         <th>Učenik</th>
                         <th>Datum posudbe</th>
                     </tr>
@@ -46,7 +45,6 @@
                     @foreach($books as $book)
                     <tr>
                         <td>{{$book['Naslov']}}</td>
-                        <td>{{$book['Autor']}}</td>
                         <td>
                         @if(isset($book->DatumPosudbe))
                             {{$book['Ime']}} {{$book['Prezime']}}
