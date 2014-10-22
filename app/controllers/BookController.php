@@ -118,7 +118,7 @@ class BookController extends BaseController {
 
 	public function Borrows()
 	{
-		$books = Book::join('posudbe', 'Knjiga' , '=', 'BookID')->where('DatumVracanja', '=', NULL)->leftJoin('korisnici', 'UserID' , '=', 'Korisnik')->get();
+		$books = Book::join('posudbe', 'Knjiga' , '=', 'BookID')->where('DatumVracanja', '=', NULL)->where('korisnici.Tip', '=', NULL)->Join('korisnici', 'UserID' , '=', 'Korisnik')->get();
 		return View::make('bookBorrows', array('books' => $books));
 	}
 }
