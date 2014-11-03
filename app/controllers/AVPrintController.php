@@ -23,7 +23,7 @@ class AVPrintController extends BaseController {
 		$sizey = 7;
 
 		//row & column offsets 
-		$offsetx = 4.2;
+		$offsetx = 4.25;
 		$offsety = 7;
 
 		//load font
@@ -68,7 +68,7 @@ class AVPrintController extends BaseController {
 			ImageTTFText($image,15,270,115,210, $black,$font, "A".$av->AVID);
 
 			//write data to image
-			ImageTTFText($image,40,0,10,75, $black,$font, "A");
+			ImageTTFText($image,40,0,10,75, $black,$font, "AV");
 			ImageTTFText($image,40,0,10,150, $black,$font, $av->AVID);
 			
 			//destroy stuff
