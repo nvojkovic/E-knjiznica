@@ -23,7 +23,7 @@ class StickerController extends BaseController {
 		$sizey = 7;
 
 		//row & column offsets 
-		$offsetx = 4.2;
+		$offsetx = 4.25;
 		$offsety = 7;
 
 		//load font
@@ -50,9 +50,9 @@ class StickerController extends BaseController {
 			{
 				$start = explode("-", $id)[0];
 				$end = explode("-", $id)[1];
-				for($i = $start; $i <= $end; $i++)
+				for($j = $start; $j <= $end; $j++)
 				{
-					$ids3[] = $i;
+					$ids3[] = $j;
 				}
 			}
 		}
@@ -76,7 +76,7 @@ class StickerController extends BaseController {
 			$white = ImageColorAllocate($image, 255,255,255);
 
 			//generate barcode
-			$barcodeName = substr(DNS1D::getBarcodePNGPath("K".$id, "C128",3.75,80),2);
+			$barcodeName = substr(DNS1D::getBarcodePNGPath("K".$id, "C128",3.6,70),2);
 			$barcode = imagecreatefrompng($barcodeName);
 			$barcode = imagerotate($barcode, 270, 0);
 			imagejpeg($barcode, "temp.jpg");
@@ -88,7 +88,7 @@ class StickerController extends BaseController {
 			//write barcode to image
 			$size = getimagesize($barcodeName);
 			$dest_x = 135;  
-			$dest_y = 90;
+			$dest_y = 20;
 			imagecopymerge($image, $barcode, $dest_x, $dest_y, 0, 0, $barcode_width, $barcode_height,100);
 
 			//write data under barcode (for manual input)
