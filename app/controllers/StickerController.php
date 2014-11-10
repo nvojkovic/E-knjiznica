@@ -15,16 +15,16 @@ class StickerController extends BaseController {
 
 		//create pdf, set landscape, paper size, margins, font
 		$pdf = new FPDF('L','cm','A4');
-		$pdf->SetMargins(0,0,0);
+		$pdf->SetMargins(1,1,1);
 		$pdf->SetFont('Arial','B',16);
 
 		//size of sticker (in cm)
 		$sizex = 4;
-		$sizey = 7;
+		$sizey = 6;
 
 		//row & column offsets 
 		$offsetx = 4.25;
-		$offsety = 7;
+		$offsety = 6.25;
 
 		//load font
 		putenv('GDFONTPATH=' . realpath('.'));
@@ -87,17 +87,20 @@ class StickerController extends BaseController {
 
 			//write barcode to image
 			$size = getimagesize($barcodeName);
-			$dest_x = 135;  
+			$dest_x = 145;  
 			$dest_y = 20;
 			imagecopymerge($image, $barcode, $dest_x, $dest_y, 0, 0, $barcode_width, $barcode_height,100);
 
 			//write data under barcode (for manual input)
-			ImageTTFText($image,15,270,115,210, $black,$font, "K".$book->BookID);
+			ImageTTFText($image,15,270,115,150, $black,$font, "K".$book->BookID);
 
 			//write data to image
-			ImageTTFText($image,40,0,10,75, $black,$font, "2");
-			ImageTTFText($image,40,0,10,150, $black,$font, "TAY");
-			ImageTTFText($image,40,0,10,210, $black,$font, "b");
+			if(isset($signatura[0]))
+				ImageTTFText($image,25,0,10,50, $black,$font, $signatura[0]);
+			if(isset($signatura[1]))
+				ImageTTFText($image,25,0,10,100, $black,$font, $signatura[1]);
+			if(isset($signatura[2]))
+				ImageTTFText($image,25,0,10,150, $black,$font, $signatura[2]);
 			
 			//destroy stuff
 			imagejpeg($image, 'K'.$book->BookID.".jpg");
