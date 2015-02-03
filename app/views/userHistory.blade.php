@@ -23,6 +23,7 @@
             <table class="table table-bordered table-hover">
                 <thead>
                     <tr>
+                        <th>ID knjige</th>
                         <th>Naslov knjige</th>
                         <th>Autor</th>
                         <th>Datum posudbe</th>
@@ -32,6 +33,7 @@
                 <tbody>
                     @foreach($history as $item)
                     <tr>
+                        <td>{{$item['BookID']}}</td>
                         <td>{{$item['Naslov']}}</td>
                         <td>{{$item['Autor']}}</td>
                         <td>{{$item['DatumPosudbe']}}</td>
