@@ -32,6 +32,7 @@ class UserController extends BaseController {
 			$book = $item->book;
 			$temp['Naslov'] = $book->Naslov;
 			$temp['Autor'] = $book->Autor;
+			$temp['BookID'] = $book->BookID;
 			$temp['DatumPosudbe'] = date('d.m.Y', strtotime($item->DatumPosudbe));
 			if(strtotime($item->DatumVracanja) == 0)
 				$temp['DatumVracanja'] = "";
@@ -40,5 +41,11 @@ class UserController extends BaseController {
 			array_push($history, $temp);
 		}
 		return View::Make('userHistory', array('user' => $user, 'grade' => $grade, 'history' => $history));
+	}
+
+	public function Search()
+	{
+		$users = User::all();
+		return View::Make('userSearch', array('users' => $users));
 	}
 }
