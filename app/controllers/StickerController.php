@@ -23,8 +23,8 @@ class StickerController extends BaseController {
 		$sizey = 6;
 
 		//row & column offsets 
-		$offsetx = 4.25;
-		$offsety = 6.25;
+		$offsetx = 4.3;
+		$offsety = 7.5;
 
 		//load font
 		putenv('GDFONTPATH=' . realpath('.'));
@@ -76,7 +76,7 @@ class StickerController extends BaseController {
 			$white = ImageColorAllocate($image, 255,255,255);
 
 			//generate barcode
-			$barcodeName = substr(DNS1D::getBarcodePNGPath("K".$id, "C128",3.6,70),2);
+			$barcodeName = substr(DNS1D::getBarcodePNGPath("K".$id, "C128",2.6,70),2);
 			$barcode = imagecreatefrompng($barcodeName);
 			$barcode = imagerotate($barcode, 270, 0);
 			imagejpeg($barcode, "temp.jpg");
