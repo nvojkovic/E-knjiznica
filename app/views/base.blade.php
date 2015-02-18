@@ -14,6 +14,7 @@
     <link href="{{ URL::asset('css/plugins/morris.css')}}" rel="stylesheet">
     <link href="{{ URL::asset('font-awesome-4.1.0/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
     <link href="{{ URL::asset('js/select/select2.css')}}" rel="stylesheet"/>
+    <link href="//cdn.datatables.net/1.10.5/css/jquery.dataTables.css" rel="stylesheet"/>
 
     <!-- jQuery Version 1.11.0 -->
     <script src="{{ URL::asset('js/jquery-1.11.0.js')}}"></script>
@@ -58,6 +59,7 @@
                         <ul id="demo2" class="collapse">
 							<li><a href="/ucenik/dodaj">Dodaj učenika</a></li>
 							<li><a href="/ucenik/povecajrazrede">Povećaj razrede</a></li>
+                            <li><a href="/ucenik/trazi">Pretraži učenike</a></li>
                         </ul>
                     </li>
                     <li>
@@ -112,8 +114,11 @@
     <!-- Morris Charts JavaScript -->
     <script src="{{ URL::asset('js/plugins/morris/raphael.min.js')}}"></script>
     <script src="{{ URL::asset('js/plugins/morris/morris.min.js')}}"></script>
+    <script src="//cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript">
     $(document).ready(function() {
+
+        $('#search').DataTable();
         $(document).keypress(function(e) {
             //if 'p' is pressed
             if(e.which == 112 && !$("input").is(':focus')) {
