@@ -24,7 +24,7 @@ class ContactController extends BaseController {
 		$messages = file_get_contents("http://vojka.tk/chat/content");
 		$messages = $messages."$"."K:".$newMessage;
 
-		$messages = htmlentities($messages);
+		$messages = urlencode(htmlentities($messages));
 
 		//upload the message
 		file_get_contents("http://vojka.tk/chat/save.php?data=".$messages);
