@@ -3,6 +3,9 @@ E-knjižnica
 
 Napravljeno za knjižnicu [OŠ Kman-Kocunar](http://os-kman-kocunar-st.skole.hr/)
 
+![ScreenShot](https://raw.github.com/nvojkovic/E-knjiznica/master/screenshot.jpg)
+
+
 ####Korištene tehnologije:####
 
 - PHP/Laravel framework
