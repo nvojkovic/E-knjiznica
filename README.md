@@ -1,28 +1,27 @@
 E-knjižnica
 =======
 
-Napravljeno za knjižnicu [OŠ Kman-Kocunar](http://os-kman-kocunar-st.skole.hr/)
+Made for school library @ [OŠ Kman-Kocunar](http://os-kman-kocunar-st.skole.hr/)
 
-![ScreenShot](https://raw.github.com/nvojkovic/E-knjiznica/master/screenshot.jpg)
+![Screenshot](https://raw.github.com/nvojkovic/E-knjiznica/master/screenshot.jpg)
 
 
-####Korištene tehnologije:####
+####Technologies used:####
 
-- PHP/Laravel framework
-- Mysql
+- PHP with Laravel framework
+- MySQL
+- Twitter Bootstrap
 - jQuery
 - Morris.js
-- Select2.js
-- Bootstrap
 
-####Verzija 1.0#####
+####Version 1.0#####
 
-- Pregled podataka na kontrolnoj ploči
-- Dodavanje, uređivanje i otpis knjiga i AV građe
-- Posuđivanje i vraćanje knjiga
-- Povijest posudbi knjige i učenika
-- Pregled trenutno posuđenih knjiga
-- Pretraživanje knjiga po naslovu i autoru
-- Generiranje i ispis naljepnica za knjige i AV građu
-- Generiranje i ispis iskaznica za učenike
-- Kontakt autora
+- Data overview on dashboard
+- Adding, editing, and deleting books and AV content
+- Lending and returing books
+- Lending history of books and users
+- Overview of currently borrowed books
+- Search books by title and author
+- Generate and print stickers with barcodes for books
+- Generate and print cards with barcodes for users
+- Author contact for tech support
