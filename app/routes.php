@@ -32,6 +32,8 @@ Route::post('/knjiga/povijest', 'StatisticsController@BookHistoryPost');
 Route::get('/knjiga/trazi', 'BookController@Search');
 Route::post('/knjiga/trazi', 'BookController@SearchPost');
 Route::get('/knjiga/posudbe', 'StatisticsController@Borrows');
+Route::get('/knjiga/godina', 'StatisticsController@BooksByYear');
+Route::post('/knjiga/godina', 'StatisticsController@BooksByYearPost');
 
 //User routes
 Route::get('/ucenik/dodaj', 'UserController@Add');
