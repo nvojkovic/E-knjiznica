@@ -61,4 +61,15 @@ class StatisticsController extends BaseController {
 		}
 		return View::Make('userHistory', array('user' => $user, 'grade' => $grade, 'history' => $history));
 	}
+
+	public function BooksByYear()
+	{
+		return View::make('booksByYear');
+	}
+
+	public function BooksByYearPost()
+	{
+		$books = Book::where("Kupljeno", "LIKE", Input::get("godina")."%")->get();
+		return View::make('booksByYear', array('books' => $books));
+	}
 }
