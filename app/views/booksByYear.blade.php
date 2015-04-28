@@ -23,6 +23,16 @@
                       </select>
                     </div>
                   </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Tip nabave:</label>
+                    <div class="col-sm-10">
+                      <select class="form-control" id = "tip" name = "tip">
+                        @foreach($types as $type)
+                        <option value="{{$type['Nabava']}}">{{$type['Nabava']}}</option>
+                        @endforeach
+                      </select>
+                    </div>
+                  </div>
                   <div class="form-group" class="text-align">
                     <div class="col-sm-offset-2 col-sm-10">
                       <button type="submit" class="btn btn-success btn-lg">Prikaži</button>

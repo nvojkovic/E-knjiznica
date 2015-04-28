@@ -64,12 +64,13 @@ class StatisticsController extends BaseController {
 
 	public function BooksByYear()
 	{
-		return View::make('booksByYear');
+		$types= Book::distinct()->select("Nabava")->groupBy("Nabava")->get();
+		return View::make('booksByYear', array('types' => $types));
 	}
 
 	public function BooksByYearPost()
 	{
-		$books = Book::where("Kupljeno", "LIKE", Input::get("godina")."%")->get();
+		$books = Book::where("Kupljeno", "LIKE", Input::get("godina")."%")->where("Nabava", "=", Input::get("tip"))->get();
 		return View::make('booksByYear', array('books' => $books));
 	}
 }
