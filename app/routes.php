@@ -27,11 +27,11 @@ Route::get('/knjiga/vrati', 'BookController@Returning');
 Route::post('/knjiga/vrati', 'BookController@ReturningPost');
 Route::get('/knjiga/otpisi', 'BookController@WriteOff');
 Route::post('/knjiga/otpisi', 'BookController@WriteOffPost');
-Route::get('/knjiga/povijest', 'BookController@History');
-Route::post('/knjiga/povijest', 'BookController@HistoryPost');
+Route::get('/knjiga/povijest', 'StatisticsController@BookHistory');
+Route::post('/knjiga/povijest', 'StatisticsController@BookHistoryPost');
 Route::get('/knjiga/trazi', 'BookController@Search');
 Route::post('/knjiga/trazi', 'BookController@SearchPost');
-Route::get('/knjiga/posudbe', 'BookController@Borrows');
+Route::get('/knjiga/posudbe', 'StatisticsController@Borrows');
 
 //User routes
 Route::get('/ucenik/dodaj', 'UserController@Add');
