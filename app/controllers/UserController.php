@@ -48,4 +48,12 @@ class UserController extends BaseController {
 		$users = User::all();
 		return View::Make('userSearch', array('users' => $users));
 	}
+
+	public function Show($id)
+	{
+		$user = User::find($id);
+		$borrows = Borrow::where('Korisnik', '=', $id)->leftJoin('knjige', 'BookID' , '=', 'Knjiga')->orderBy('DatumPosudbe', 'DESC')->get();
+		//return array('user' => $user, 'borrows' => $borrows);
+		return View::Make('userShow', array('user' => $user, 'borrows' => $borrows));
+	}
 }

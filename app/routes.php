@@ -39,6 +39,7 @@ Route::post('/ucenik/dodaj', 'UserController@AddPost');
 Route::get('/ucenik/povijest', 'UserController@History');
 Route::post('/ucenik/povijest', 'UserController@HistoryPost');
 Route::get('/ucenik/trazi', 'UserController@Search');
+Route::get('/ucenik/prikazi/{id}', 'UserController@Show');
 
 //AV routes
 Route::get('/av/dodaj', 'AVController@Add');
