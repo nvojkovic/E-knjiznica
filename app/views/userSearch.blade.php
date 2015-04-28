@@ -10,14 +10,14 @@
             <table class="table table-bordered table-hover" id = "search">
                 <thead>
                     <tr>
-                        <th>ID</th>
                         <th>Ime i prezime</th>
+                        <th>ID</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach($users as $user)
                     <tr>
-                        <td><a href = "user/show/{{$user['UserID']}}">{{$user['Ime']}} {{$user['Prezime']}}</a></td>
+                        <td><a href = "/ucenik/prikazi/{{$user['UserID']}}">{{$user['Ime']}} {{$user['Prezime']}}</a></td>
                         <td>{{$user['UserID']}}</td>
                     </tr>
                     @endforeach

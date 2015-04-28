@@ -33,7 +33,7 @@
             <br>
             <center><h4><strong>Broj primjeraka: </strong> {{count($books)}}</h4></center>
             <br>
-            <table class="table table-bordered table-hover">
+            <table class="table table-bordered table-hover" id = "search">
                 <thead>
                     <tr>
                         <th>Naslov</th>
