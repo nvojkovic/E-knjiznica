@@ -28,21 +28,6 @@ class StatisticsController extends BaseController {
 		return View::make('bookHistory', array('history' => $history, 'book' => $book));
 	}
 
-	public function BookSearch()
-	{
-		return View::make('bookSearch');
-	}
-
-	public function BookSearchPost()
-	{
-		if(Input::get('Naslov') != "")
-			$books = Book::where('Naslov', 'LIKE', "%".Input::get('Naslov')."%")->leftJoin('posudbe', 'Knjiga' , '=', 'BookID')->leftJoin('korisnici', 'UserID' , '=', 'Korisnik')->groupBy('knjige.BookID')->get();
-		else if (Input::get('Autor') != "")
-			$books = Book::where('Autor', 'LIKE', "%".Input::get('Autor')."%")->leftJoin('posudbe', 'Knjiga' , '=', 'BookID')->leftJoin('korisnici', 'UserID' , '=', 'Korisnik')->groupBy('knjige.BookID')->get();
-		
-		return View::make('bookSearch', array('books' => $books));
-	}
-
 	public function Borrows()
 	{
 		$books = Book::join('posudbe', 'Knjiga' , '=', 'BookID')->where('DatumVracanja', '=', NULL)->where('korisnici.Tip', '=', NULL)->Join('korisnici', 'UserID' , '=', 'Korisnik')->get();
